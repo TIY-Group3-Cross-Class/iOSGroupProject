@@ -30,16 +30,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        
 //    }
     
+    
+    var pictureTaken = false
+    
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(true)
         
-        imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
-        
-        dispatch_after(DISPATCH_TIME_NOW + NSEC_PER_SEC * 20, dispatch_get_main_queue()) { () -> Void in
+        if pictureTaken == false {
             
-            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+            imagePicker.delegate = self
+            imagePicker.sourceType = .Camera
+            
+            dispatch_after(DISPATCH_TIME_NOW + NSEC_PER_SEC * 20, dispatch_get_main_queue()) { () -> Void in
+                
+                self.presentViewController(self.imagePicker, animated: true, completion: nil)
+                
+            }
             
         }
     }
@@ -56,12 +63,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         
+        pictureTaken = true
+        
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             saveImageToS3(image)
+            
+            picker.dismissViewControllerAnimated(true, completion: { () -> Void in
+                
+                
+                let editPictureVC = self.storyboard?.instantiateViewControllerWithIdentifier("editPictureVC") as! EditPictureViewController
+                
+                editPictureVC.image = image
+                
+                self.navigationController?.pushViewController(editPictureVC, animated: true)
+                
+            })
+            
         }
         
-        picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
      
@@ -105,7 +125,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     println("\(info.URL.absoluteString)")
                     
                     RailsRequest.session().imageURL = info.URL.absoluteString
-                
+                                    
                 }, failure: { (error) -> Void in
                     
                 println("\(error)")

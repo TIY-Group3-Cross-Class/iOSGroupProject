@@ -10,6 +10,11 @@ import UIKit
 
 class EditPictureViewController: UIViewController {
     
+    var image: UIImage!
+    
+    @IBOutlet weak var imageVIew: UIImageView!
+    
+    
     @IBAction func backButton(sender: UIButton) {
         var profileVC = self.storyboard?.instantiateViewControllerWithIdentifier("profileVC")
             as! ProfileViewController
@@ -29,7 +34,9 @@ class EditPictureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        imageVIew.image = image
+        
         // Do any additional setup after loading the view.
     }
 

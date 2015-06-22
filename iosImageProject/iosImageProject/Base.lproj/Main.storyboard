@@ -22,7 +22,7 @@
         <!--Edit Picture View Controller-->
         <scene sceneID="cgS-1F-hcB">
             <objects>
-                <viewController id="49Y-fg-bSc" customClass="EditPictureViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editPictureVC" id="49Y-fg-bSc" customClass="EditPictureViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a3l-Qq-ejM"/>
                         <viewControllerLayoutGuide type="bottom" id="BMY-tX-nY0"/>
@@ -99,6 +99,7 @@
                     </view>
                     <connections>
                         <outlet property="answerField" destination="JJB-Mk-CvB" id="tgu-em-Elv"/>
+                        <outlet property="imageVIew" destination="Ocw-yw-QP8" id="hW3-ql-HrD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccD-yH-J5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
