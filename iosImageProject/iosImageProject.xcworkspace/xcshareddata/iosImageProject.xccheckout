@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8B5E956D-9E2D-4DE6-AC00-A1EFA242CAA1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iosImageProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DBAB377A358D88E448A80805783937B154F317C1</key>
+		<string>https://github.com/TIY-Group3-Cross-Class/iosimageproject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iosImageProject/iosImageProject.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DBAB377A358D88E448A80805783937B154F317C1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TIY-Group3-Cross-Class/iosimageproject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DBAB377A358D88E448A80805783937B154F317C1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DBAB377A358D88E448A80805783937B154F317C1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iosimageproject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

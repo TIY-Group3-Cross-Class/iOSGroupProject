@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2N5-n2-8WM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="KGALittleSwag.ttf">
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+            <string>KGALittleSwag</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Edit Picture View Controller-->
+        <scene sceneID="cgS-1F-hcB">
+            <objects>
+                <viewController id="49Y-fg-bSc" customClass="EditPictureViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a3l-Qq-ejM"/>
+                        <viewControllerLayoutGuide type="bottom" id="BMY-tX-nY0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXC-AU-dsc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="7Jw-bM-kEI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ocw-yw-QP8">
+                                <rect key="frame" x="55" y="30" width="490" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="dt5-1Z-fej"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ4-0o-Ojq">
+                                <rect key="frame" x="16" y="513" width="155" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hpS-oU-vA7"/>
+                                    <constraint firstAttribute="width" constant="155" id="lFm-ae-Cm5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="66"/>
+                                <state key="normal" title="BACK ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="49Y-fg-bSc" eventType="touchUpInside" id="hXG-6w-am6"/>
+                                    <action selector="backtoCamera:" destination="49Y-fg-bSc" eventType="touchUpInside" id="8x9-A0-M1P"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="WHAT IS YOUR PICTURE?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJB-Mk-CvB">
+                                <rect key="frame" x="55" y="397" width="490" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="so7-3X-1JW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeB-xF-MOe">
+                                <rect key="frame" x="434" y="513" width="150" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8yi-ke-seZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="elW-XU-LtP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="66"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="49Y-fg-bSc" eventType="touchUpInside" id="KFG-SB-E3S"/>
+                                    <action selector="submitPicture:" destination="49Y-fg-bSc" eventType="touchUpInside" id="LpD-M4-lqt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72770528590425532" green="0.67284696601432792" blue="0.65825222310136566" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ocw-yw-QP8" firstAttribute="top" secondItem="cXC-AU-dsc" secondAttribute="topMargin" constant="30" id="37P-p1-pPP"/>
+                            <constraint firstItem="oZ4-0o-Ojq" firstAttribute="leading" secondItem="cXC-AU-dsc" secondAttribute="leadingMargin" id="BTp-R8-5M5"/>
+                            <constraint firstItem="BMY-tX-nY0" firstAttribute="top" secondItem="ZeB-xF-MOe" secondAttribute="bottom" constant="27" id="GLd-KX-g9N"/>
+                            <constraint firstItem="JJB-Mk-CvB" firstAttribute="leading" secondItem="cXC-AU-dsc" secondAttribute="leadingMargin" constant="39" id="MlD-gM-BAa"/>
+                            <constraint firstItem="BMY-tX-nY0" firstAttribute="top" secondItem="oZ4-0o-Ojq" secondAttribute="bottom" constant="27" id="ObV-gA-pd4"/>
+                            <constraint firstItem="Ocw-yw-QP8" firstAttribute="leading" secondItem="cXC-AU-dsc" secondAttribute="leadingMargin" constant="39" id="PkF-eG-rTW"/>
+                            <constraint firstItem="JJB-Mk-CvB" firstAttribute="top" secondItem="Ocw-yw-QP8" secondAttribute="bottom" constant="17" id="U6d-Mr-Jyk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JJB-Mk-CvB" secondAttribute="trailing" constant="39" id="e95-i5-Lod"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ocw-yw-QP8" secondAttribute="trailing" constant="39" id="pJh-2P-yI0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZeB-xF-MOe" secondAttribute="trailing" id="w8n-an-D2l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerField" destination="JJB-Mk-CvB" id="tgu-em-Elv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccD-yH-J5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3261" y="315"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="6q3-yy-l7m">
+            <objects>
+                <viewController storyboardIdentifier="cameraVC" title="Camera View Controller" id="ck5-oW-mH9" customClass="ViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HNt-lg-50F"/>
+                        <viewControllerLayoutGuide type="bottom" id="xwF-hL-4HB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FC2-85-vYu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Co6-C8-VyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2601" y="315"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="jhG-XE-Ib3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vLZ-eb-uW1">
+                                <rect key="frame" x="16" y="215" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="6B0-m6-bcd"/>
+                                    <constraint firstAttribute="height" constant="30" id="WVo-LY-OJm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fn-Oi-TXj">
+                                <rect key="frame" x="16" y="138" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="UJI-aY-Npe"/>
+                                    <constraint firstAttribute="height" constant="30" id="aOV-2U-Ebg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFc-Mz-eov">
+                                <rect key="frame" x="16" y="534" width="568" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="Z0l-VE-n2g"/>
+                                    <constraint firstAttribute="height" constant="50" id="qCI-PD-ynX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="70"/>
+                                <state key="normal" title="REGISTER">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cj2-Ux-u3Z"/>
+                                    <segue destination="F5y-ul-4Ym" kind="presentation" id="VEu-sE-feK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oz-Lt-ce6">
+                                <rect key="frame" x="16" y="315" width="568" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zPB-CA-XZN"/>
+                                    <constraint firstAttribute="width" constant="568" id="zV2-0N-Eul"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="70"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wF8-q3-bip"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8fn-Oi-TXj" secondAttribute="trailing" constant="16" id="3KR-3D-eIF"/>
+                            <constraint firstAttribute="trailing" secondItem="6Oz-Lt-ce6" secondAttribute="trailing" constant="16" id="4dQ-Ia-Hen"/>
+                            <constraint firstAttribute="trailing" secondItem="iFc-Mz-eov" secondAttribute="trailing" constant="16" id="5i2-hO-tpY"/>
+                            <constraint firstItem="vLZ-eb-uW1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="5qE-4B-Ock"/>
+                            <constraint firstItem="6Oz-Lt-ce6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Bcp-Ew-TQN"/>
+                            <constraint firstItem="6Oz-Lt-ce6" firstAttribute="top" secondItem="vLZ-eb-uW1" secondAttribute="bottom" constant="70" id="F3x-vS-Izn"/>
+                            <constraint firstItem="iFc-Mz-eov" firstAttribute="top" secondItem="6Oz-Lt-ce6" secondAttribute="bottom" constant="169" id="K5h-H0-htb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jhG-XE-Ib3" secondAttribute="bottom" id="Lux-bj-rxc"/>
+                            <constraint firstItem="jhG-XE-Ib3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Oud-pO-9Ic"/>
+                            <constraint firstItem="jhG-XE-Ib3" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Tub-bp-nLb"/>
+                            <constraint firstItem="8fn-Oi-TXj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="TwE-E4-F6O"/>
+                            <constraint firstItem="iFc-Mz-eov" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="W1x-Xp-IXy"/>
+                            <constraint firstAttribute="trailing" secondItem="vLZ-eb-uW1" secondAttribute="trailing" constant="16" id="WCl-UR-Iy3"/>
+                            <constraint firstItem="vLZ-eb-uW1" firstAttribute="top" secondItem="8fn-Oi-TXj" secondAttribute="bottom" constant="47" id="a53-r3-sW2"/>
+                            <constraint firstAttribute="trailing" secondItem="jhG-XE-Ib3" secondAttribute="trailing" id="exQ-EK-Lb5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="iFc-Mz-eov" secondAttribute="bottom" constant="16" id="xYR-tn-GsL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4sQ-m9-o7X"/>
+                    <connections>
+                        <outlet property="passwordField" destination="vLZ-eb-uW1" id="bX7-4T-Eds"/>
+                        <outlet property="usernameField" destination="8fn-Oi-TXj" id="LIJ-hf-fZJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="315"/>
+        </scene>
+        <!--Play Game View Controller-->
+        <scene sceneID="hPm-AU-dNW">
+            <objects>
+                <viewController storyboardIdentifier="playgameVC" id="PRI-Y0-7q2" customClass="PlayGameViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Dy-tv-zeh"/>
+                        <viewControllerLayoutGuide type="bottom" id="JZ3-zg-Sw6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wJS-AR-5ZB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-k5-CqP">
+                                <rect key="frame" x="0.0" y="0.0" width="740" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-5v-p4X">
+                                <rect key="frame" x="16" y="11" width="568" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="gji-5D-wTK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDH-FE-AkF">
+                                <rect key="frame" x="485" y="505" width="99" height="66"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Kxw-w1-3fB"/>
+                                    <constraint firstAttribute="width" constant="99" id="Z7p-Wa-EOw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="58"/>
+                                <state key="normal" title=" BACK">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="PRI-Y0-7q2" eventType="touchUpInside" id="Vty-nt-T0l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-ux-A5y">
+                                <rect key="frame" x="16" y="503" width="99" height="69"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="9Wa-Fk-U5z"/>
+                                    <constraint firstAttribute="height" constant="69" id="ywH-5f-bvw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="58"/>
+                                <state key="normal" title="NEXT ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="PRI-Y0-7q2" eventType="touchUpInside" id="g7B-l6-ODx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GUESS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eF0-xu-ZW2">
+                                <rect key="frame" x="16" y="376" width="568" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Gr6-6O-erC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eF0-xu-ZW2" firstAttribute="leading" secondItem="wJS-AR-5ZB" secondAttribute="leadingMargin" id="12M-JI-kNg"/>
+                            <constraint firstItem="JZ3-zg-Sw6" firstAttribute="top" secondItem="cDH-FE-AkF" secondAttribute="bottom" constant="29" id="6SX-Uc-PHY"/>
+                            <constraint firstItem="sxI-5v-p4X" firstAttribute="top" secondItem="wJS-AR-5ZB" secondAttribute="topMargin" constant="11" id="Cq0-c7-My5"/>
+                            <constraint firstItem="JZ3-zg-Sw6" firstAttribute="top" secondItem="Gmf-ux-A5y" secondAttribute="bottom" constant="28" id="Et6-n4-05H"/>
+                            <constraint firstItem="sxI-5v-p4X" firstAttribute="trailing" secondItem="wJS-AR-5ZB" secondAttribute="trailingMargin" id="XyM-f1-WZK"/>
+                            <constraint firstItem="Gmf-ux-A5y" firstAttribute="leading" secondItem="wJS-AR-5ZB" secondAttribute="leadingMargin" id="ZtO-rf-rLn"/>
+                            <constraint firstItem="sxI-5v-p4X" firstAttribute="leading" secondItem="wJS-AR-5ZB" secondAttribute="leadingMargin" id="egD-qe-ooD"/>
+                            <constraint firstItem="eF0-xu-ZW2" firstAttribute="top" secondItem="sxI-5v-p4X" secondAttribute="bottom" constant="15" id="hsS-Xb-fTY"/>
+                            <constraint firstItem="eF0-xu-ZW2" firstAttribute="trailing" secondItem="wJS-AR-5ZB" secondAttribute="trailingMargin" id="q9c-ZO-ftP"/>
+                            <constraint firstItem="cDH-FE-AkF" firstAttribute="trailing" secondItem="wJS-AR-5ZB" secondAttribute="trailingMargin" id="qqe-We-BVn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guessField" destination="eF0-xu-ZW2" id="zkS-cO-Qo3"/>
+                        <outletCollection property="postedPics" destination="sxI-5v-p4X" collectionClass="NSMutableArray" id="M2j-uY-4v7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykv-wu-mGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="1013"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="3ad-lJ-edh">
+            <objects>
+                <viewController storyboardIdentifier="registerVC" id="F5y-ul-4Ym" customClass="RegisterViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dSS-on-vlL"/>
+                        <viewControllerLayoutGuide type="bottom" id="9oH-6Z-iqN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ngs-FS-BcT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="rvY-HW-Dq0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FULL NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pR-CK-lgM">
+                                <rect key="frame" x="16" y="113" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SRu-9R-Lzd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL ADDRESS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aii-No-7Fv">
+                                <rect key="frame" x="16" y="68" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TrC-HW-CBC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-dp-Jac">
+                                <rect key="frame" x="16" y="20" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Xk-dd-TSO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CHOOSE PASSWORD" textAlignment="center" minimumFontSize="17" background="silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="W3L-Ca-M4F">
+                                <rect key="frame" x="16" y="157" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zqt-NA-0BB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5L-3S-aKP">
+                                <rect key="frame" x="16" y="214" width="568" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="R1U-c0-qxz"/>
+                                    <constraint firstAttribute="height" constant="50" id="lJy-dZ-tXM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="70"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="R1U-c0-qxz"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="submitButton:" destination="F5y-ul-4Ym" eventType="touchUpInside" id="ez6-46-9yJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W3L-Ca-M4F" firstAttribute="top" secondItem="9pR-CK-lgM" secondAttribute="bottom" constant="14" id="2kO-uB-Tut"/>
+                            <constraint firstItem="T5L-3S-aKP" firstAttribute="top" secondItem="W3L-Ca-M4F" secondAttribute="bottom" constant="27" id="4aZ-oy-ehs"/>
+                            <constraint firstItem="9oH-6Z-iqN" firstAttribute="top" secondItem="T5L-3S-aKP" secondAttribute="bottom" constant="20" id="57d-ru-gzc"/>
+                            <constraint firstItem="ejB-dp-Jac" firstAttribute="top" secondItem="dSS-on-vlL" secondAttribute="bottom" id="5FK-ms-XKE"/>
+                            <constraint firstItem="W3L-Ca-M4F" firstAttribute="trailing" secondItem="Ngs-FS-BcT" secondAttribute="trailingMargin" id="AN2-lS-f5y"/>
+                            <constraint firstItem="ejB-dp-Jac" firstAttribute="leading" secondItem="Ngs-FS-BcT" secondAttribute="leadingMargin" id="Rij-mz-FRB"/>
+                            <constraint firstItem="9pR-CK-lgM" firstAttribute="top" secondItem="aii-No-7Fv" secondAttribute="bottom" constant="15" id="SNy-0Q-GDL"/>
+                            <constraint firstItem="aii-No-7Fv" firstAttribute="trailing" secondItem="Ngs-FS-BcT" secondAttribute="trailingMargin" id="Y1B-ol-VYk"/>
+                            <constraint firstItem="rvY-HW-Dq0" firstAttribute="top" secondItem="Ngs-FS-BcT" secondAttribute="top" id="bwy-x1-gvP"/>
+                            <constraint firstAttribute="trailing" secondItem="rvY-HW-Dq0" secondAttribute="trailing" id="dd6-hj-4gw"/>
+                            <constraint firstItem="9pR-CK-lgM" firstAttribute="trailing" secondItem="Ngs-FS-BcT" secondAttribute="trailingMargin" id="g2G-fl-dEg"/>
+                            <constraint firstItem="T5L-3S-aKP" firstAttribute="trailing" secondItem="Ngs-FS-BcT" secondAttribute="trailingMargin" id="gCS-Nx-IJL"/>
+                            <constraint firstItem="aii-No-7Fv" firstAttribute="leading" secondItem="Ngs-FS-BcT" secondAttribute="leadingMargin" id="kXi-sB-83x"/>
+                            <constraint firstItem="ejB-dp-Jac" firstAttribute="trailing" secondItem="Ngs-FS-BcT" secondAttribute="trailingMargin" id="l5S-W0-9aZ"/>
+                            <constraint firstItem="rvY-HW-Dq0" firstAttribute="leading" secondItem="Ngs-FS-BcT" secondAttribute="leading" id="pQT-n2-eXi"/>
+                            <constraint firstItem="W3L-Ca-M4F" firstAttribute="leading" secondItem="Ngs-FS-BcT" secondAttribute="leadingMargin" id="qgT-55-u2j"/>
+                            <constraint firstItem="T5L-3S-aKP" firstAttribute="leading" secondItem="Ngs-FS-BcT" secondAttribute="leadingMargin" id="t8O-gb-5IG"/>
+                            <constraint firstItem="9oH-6Z-iqN" firstAttribute="top" secondItem="rvY-HW-Dq0" secondAttribute="bottom" id="thS-yc-qyv"/>
+                            <constraint firstItem="aii-No-7Fv" firstAttribute="top" secondItem="ejB-dp-Jac" secondAttribute="bottom" constant="18" id="v3D-f1-yk6"/>
+                            <constraint firstItem="9pR-CK-lgM" firstAttribute="leading" secondItem="Ngs-FS-BcT" secondAttribute="leadingMargin" id="xMe-PB-4pm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="57d-ru-gzc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="emailOutlet" destination="aii-No-7Fv" id="iuZ-SC-BB1"/>
+                        <outlet property="fullnameOutlet" destination="9pR-CK-lgM" id="MiK-7U-TdJ"/>
+                        <outlet property="passwordOulet" destination="W3L-Ca-M4F" id="TII-pM-5ya"/>
+                        <outlet property="usernameOutlet" destination="ejB-dp-Jac" id="i76-Tv-gwu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aq7-Lr-CPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="1013"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="xIv-vm-lvB">
+            <objects>
+                <viewController storyboardIdentifier="profileVC" id="XuK-i4-0FJ" customClass="ProfileViewController" customModule="iosImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ls9-wH-wAb"/>
+                        <viewControllerLayoutGuide type="bottom" id="tQs-FH-0da"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gJP-sE-OwY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-F0-6jl">
+                                <rect key="frame" x="0.0" y="0.0" width="740" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKf-Ka-CQD">
+                                <rect key="frame" x="16" y="457" width="568" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GKJ-AU-6eD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="70"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButton:" destination="XuK-i4-0FJ" eventType="touchUpInside" id="n0K-WY-ZZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HK2-7l-1Tm">
+                                <rect key="frame" x="60" y="360" width="96" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="97R-DM-qp2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="57"/>
+                                <state key="normal" title="POST ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButton:" destination="XuK-i4-0FJ" eventType="touchUpInside" id="kNo-VQ-xq6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BI1-Yo-Ypv">
+                                <rect key="frame" x="240" y="224" width="120" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="QGm-a7-jrz"/>
+                                    <constraint firstAttribute="height" constant="60" id="eZL-hb-iLe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYt-ek-QQJ">
+                                <rect key="frame" x="240" y="133" width="120" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="OXc-WZ-Jse"/>
+                                    <constraint firstAttribute="height" constant="60" id="wcR-vi-9zl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uis-UM-hip">
+                                <rect key="frame" x="444" y="360" width="96" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gFT-Y7-3bS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KGALittleSwag" family="KG A Little Swag" pointSize="57"/>
+                                <state key="normal" title="PLAY ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButton:" destination="XuK-i4-0FJ" eventType="touchUpInside" id="Np7-al-fu9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BI1-Yo-Ypv" firstAttribute="top" secondItem="rYt-ek-QQJ" secondAttribute="bottom" constant="31" id="2ux-Fs-mbo"/>
+                            <constraint firstItem="Uis-UM-hip" firstAttribute="leading" secondItem="HK2-7l-1Tm" secondAttribute="trailing" constant="102" id="7C5-9v-2cU"/>
+                            <constraint firstAttribute="centerX" secondItem="rYt-ek-QQJ" secondAttribute="centerX" id="8rS-CU-LcD"/>
+                            <constraint firstItem="uKf-Ka-CQD" firstAttribute="leading" secondItem="gJP-sE-OwY" secondAttribute="leading" constant="16" id="AIp-Eh-wm3"/>
+                            <constraint firstItem="uKf-Ka-CQD" firstAttribute="top" secondItem="Uis-UM-hip" secondAttribute="bottom" constant="47" id="DhL-pl-QNr"/>
+                            <constraint firstAttribute="trailing" secondItem="Uis-UM-hip" secondAttribute="trailing" constant="60" id="JbV-81-ie4"/>
+                            <constraint firstItem="uKf-Ka-CQD" firstAttribute="top" secondItem="HK2-7l-1Tm" secondAttribute="bottom" constant="47" id="M3n-M9-iIg"/>
+                            <constraint firstAttribute="centerX" secondItem="BI1-Yo-Ypv" secondAttribute="centerX" id="MVT-T6-6w7"/>
+                            <constraint firstItem="Uis-UM-hip" firstAttribute="leading" secondItem="HK2-7l-1Tm" secondAttribute="trailing" constant="124" id="TKB-DU-DgK"/>
+                            <constraint firstAttribute="trailing" secondItem="uKf-Ka-CQD" secondAttribute="trailing" constant="16" id="WtN-51-s2k"/>
+                            <constraint firstItem="uKf-Ka-CQD" firstAttribute="top" secondItem="HK2-7l-1Tm" secondAttribute="bottom" constant="47" id="j6A-Jp-MiC"/>
+                            <constraint firstItem="tQs-FH-0da" firstAttribute="top" secondItem="uKf-Ka-CQD" secondAttribute="bottom" constant="93" id="lmt-oG-hE2"/>
+                            <constraint firstItem="uKf-Ka-CQD" firstAttribute="top" secondItem="BI1-Yo-Ypv" secondAttribute="bottom" constant="173" id="p1K-16-9a0"/>
+                            <constraint firstItem="HK2-7l-1Tm" firstAttribute="leading" secondItem="gJP-sE-OwY" secondAttribute="leading" constant="60" id="vq5-wl-el5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7C5-9v-2cU"/>
+                                <exclude reference="TKB-DU-DgK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="rYt-ek-QQJ" id="TV3-qY-c62"/>
+                        <outlet property="topscoreLabel" destination="BI1-Yo-Ypv" id="GPE-j5-Bfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDM-wy-A8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="315"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pIq-sG-dSY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2N5-n2-8WM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GTG-ig-nQb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="4Wf-he-qC9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncR-zZ-Hph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="silhouette" width="740" height="600"/>
+    </resources>
+</document>
